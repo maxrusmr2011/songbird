@@ -1,0 +1,29 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "airbnb/base",
+    "prettier",
+    "prettier/react"
+  ],
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "plugins": [
+    "import",
+    "jsx-a11y",
+    "react",
+    "react-hooks"
+  ],
+  "parserOptions": {
+    "jsx": true
+  },
+  "rules": {
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
+    "linebreak-style": [
+      "error",
+      "windows"
+    ]
+  }
+}

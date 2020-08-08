@@ -1,0 +1,8 @@
+.level {
+  &__item {
+    background: green;
+    &-active {
+      background: greenyellow;
+    }
+  }
+}
