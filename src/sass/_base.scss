@@ -3,7 +3,27 @@
   padding: 0;
   border: 0;
   list-style: none;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
 }
 
 body {
+  background: #252525;
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 5px;
+}
+
+.wrapper {
+  max-width: 1000px;
+  margin: 0 auto; 
+}
+
+
+@font-face {
+  font-family: 'DancingScript';
+  font-weight: 700;
+  src: url(./assets/fonts/DancingScript-Bold.ttf) format('truetype');
 }

@@ -6,7 +6,7 @@ import App from './components/App/App.jsx';
 
 // const AppWithHot = hot(module)(App);
 ReactDOM.render(
-    <App name="Ruslan+" />,
+    <App />,
     document.getElementById('app')
   );
  

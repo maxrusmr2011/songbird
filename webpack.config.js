@@ -77,7 +77,11 @@ module.exports = (env, options) => {
         },
         {
           test: /\.(woff|woff2|eot|ttf|otf)$/,
-          use: 'file-loader'
+          use: 'file-loader?name=./fonts/[name].[ext]'
+        },
+        {
+          test: /\.(mp3)$/,
+          use: 'file-loader?name=./audio/[name].[ext]'
         }
       ],
     },
