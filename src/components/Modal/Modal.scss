@@ -4,26 +4,26 @@
   left: 0;
   width: 100%;
   height: 100%;
-  // padding: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
   background: #ffffff;
 
-  &__img {
-    max-width: 200px;
-    height: 200px;
-    // margin: 30px;
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-
-    }
+  &__main {
+    max-height: 100vh;
+    overflow: auto;
   }
-  
-  div, span, a {
+
+  img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+  }
+
+  div,
+  span,
+  a {
     text-align: center;
     color: #000000;
   }

@@ -14,13 +14,18 @@
   border: 1px solid gray;
   border-radius: 5px;
   margin: 0 10px 10px 0;
-  
+  overflow: hidden;
+
+  @media (max-width: 700px) {
+    width: 48%;
+  }
+
   @media (max-width: 480px) {
     width: auto;
     margin-right: 0;
-  
   }
 }
+
 .case {
   display: flex;
   align-items: center;
@@ -32,7 +37,6 @@
     border-bottom: none;
   }
 
-  
   &-active {
     background: #505050;
   }
@@ -41,7 +45,6 @@
     .case__word {
       color: yellow;
     }
-
   }
 
   &__mark {
@@ -51,9 +54,6 @@
     background: gray;
     border-radius: 50%;
   } 
-
-  &__word {
-  }
 }
 
 .fail {

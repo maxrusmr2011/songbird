@@ -3,29 +3,33 @@
   font-family: 700;
   font-size:3rem;
 }
+
 .header {
+
   .wrapper {
     position: relative;
   }
+
   &__logo {
     margin-bottom: 10px;
     @extend %font-logo;
+
     span {
       color: green;
       @extend %font-logo;
-    
     }
   }
+
   &__score {
     position: absolute;
     right: 10px;
     top: 20px;
   }
 }
+
 .level {
   display: flex;
   flex-wrap: wrap;
-  // height: 30px;
   margin-bottom: 10px;
   border-radius: 5px;
   overflow: hidden;

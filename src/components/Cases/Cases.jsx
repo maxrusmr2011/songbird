@@ -2,10 +2,9 @@ import React, { Component } from 'react';
 import './Cases.scss';
 
 export default class Cases extends Component {
+  
   render() {
     const { cases, marks, selectCase, end } = this.props;
-    // marks[1] = 1;
-    // marks[2] = 2;.
     return (
       <ul className="cases">
         {cases.map((item, i) => (

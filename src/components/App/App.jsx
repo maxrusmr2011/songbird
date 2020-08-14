@@ -40,8 +40,8 @@ export default class App extends Component {
       this.game.nextLevel();
       this.nullLevel();
       this.setState({...this.state});
-      }
     }
+  }
 
   nullLevel = () => {
     this.state.numLevel = this.game.currentLevel;
@@ -54,24 +54,22 @@ export default class App extends Component {
   }
 
   restart = () => {
-    // console.log('next game');
     this.game.init();
     this.state.maxScore = 0;
     this.nullLevel();
     this.setState({...this.state, score: 0, stopGame: false});
   }
     
-    selectCase = (num) => {
-      this.state.selected = num;
-      if (!this.state.endRound && !this.state.marks[num]) {
-        if (num === this.game.randomCase) {
-          this.state.marks[num] = 2;
-          this.state.endRound = true;
-          this.state.score += this.state.addScore;
-          this.correct.play();
-          this.state.stopGame = this.game.lastLevel;
-      
-          this.controlWin();
+  selectCase = (num) => {
+    this.state.selected = num;
+    if (!this.state.endRound && !this.state.marks[num]) {
+      if (num === this.game.randomCase) {
+        this.state.marks[num] = 2;
+        this.state.endRound = true;
+        this.state.score += this.state.addScore;
+        this.correct.play();
+        this.state.stopGame = this.game.lastLevel;
+        this.controlWin();
       } else {
         this.state.marks[num] = 1;
         this.state.addScore -= 1;

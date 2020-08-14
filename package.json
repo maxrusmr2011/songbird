@@ -9,7 +9,7 @@
     "dev": "webpack --mode development",
     "prod": "webpack --mode production",
     "start": "webpack-dev-server --hot --mode development",
-    "lint": "eslint ./src --ext .js,.jsx",
+    "lint": "e45slint ./src --ext .js,.jsx",
     "lint-f": "eslint ./src --ext .js,.jsx --fix",
     "test": "jest --collect-coverage"
   },

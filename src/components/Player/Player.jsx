@@ -20,7 +20,6 @@ export default class Player extends Component {
   }
 
   componentDidUpdate(oldProps) {
-    // if (this.props.win && !oldProps.win && this.state.play) {
     if ((this.props.win && !oldProps.win || this.props.src !== oldProps.src) && this.state.play) {
       this.play();
     }
@@ -28,13 +27,14 @@ export default class Player extends Component {
       this.audio = new Audio(this.props.src);
       
       this.audio.addEventListener('loadeddata', () => {
-        this.setState({play: false,
+        this.setState({
+          play: false,
           timeCurr: 0,
-          stopping: undefined, timeLong: this.audio.duration});
-          this.audio.volume = this.state.volume;
-
+          stopping: undefined, 
+          timeLong: this.audio.duration,
+        });
+        this.audio.volume = this.state.volume;
       });
-      // this.setState({...this.state});
     }
   }
 
@@ -71,13 +71,12 @@ export default class Player extends Component {
 
   changeVolume = (e) => {
     this.state.el = e.currentTarget;
-
     this.audio.volume = this.state.el.value;
     this.setState({...this.state, volume: this.state.el.value})
   };
 
   render() {
-    // const { volume } = this.props;
+    
     return (
       <div className="player">
         <div className="player__btn" onClick={() => {this.play()}}>

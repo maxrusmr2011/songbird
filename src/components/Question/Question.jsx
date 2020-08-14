@@ -4,16 +4,9 @@ import Player from '../Player/Player.jsx';
 import patch from '../../assets/img/bird.jpg';
 
 export default class Question extends Component {
-  // constructor(props) {
-  //   super(props);
-    
-  // }
   
   render() {
     const { bird, win } = this.props;
-    // const NewPlay = () => (
-    // <Player src={bird.audio} win={win} />
-    // );
     return (
       <div className="question">
         <div className="wrapper">

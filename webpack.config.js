@@ -93,6 +93,7 @@ module.exports = (env, options) => {
       // new CleanWebpackPlugin(),
       new HtmlWebpackPlugin({
         template: 'public/index.html',
+        favicon: 'src/assets/img/icons-bird.png'
       }),
       new MiniCssExtractPlugin({ filename: 'style.css' })
     ],
