@@ -1,0 +1,65 @@
+.main {
+  display: flex;
+  align-items: flex-start;
+
+  @media (max-width: 480px) {
+    display: block;
+  }
+}
+
+.cases {
+  width: 30%;
+  flex-shrink: 0;
+  background: #303030;
+  border: 1px solid gray;
+  border-radius: 5px;
+  margin: 0 10px 10px 0;
+  
+  @media (max-width: 480px) {
+    width: auto;
+    margin-right: 0;
+  
+  }
+}
+.case {
+  display: flex;
+  align-items: center;
+  padding: 6px 20px;
+  border-bottom: 1px solid gray;
+  cursor: pointer;
+  
+  &:last-child {
+    border-bottom: none;
+  }
+
+  
+  &-active {
+    background: #505050;
+  }
+
+  &:hover {
+    .case__word {
+      color: yellow;
+    }
+
+  }
+
+  &__mark {
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+    background: gray;
+    border-radius: 50%;
+  } 
+
+  &__word {
+  }
+}
+
+.fail {
+  background: red;
+}
+
+.success {
+  background: green;
+}
