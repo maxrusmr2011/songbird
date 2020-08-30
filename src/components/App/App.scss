@@ -1,0 +1,16 @@
+.next {
+  display: block;
+  background: grey;
+  border-radius: 5px;
+  text-align: center;
+  padding: 5px;
+
+  &-active {
+    background: green;
+
+    &:hover {
+      background: lighten($color: green, $amount: 10%);
+      cursor: pointer;
+    }
+  }
+}

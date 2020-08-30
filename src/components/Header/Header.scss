@@ -1,0 +1,50 @@
+%font-logo {
+  font-family: DancingScript;
+  font-family: 700;
+  font-size:3rem;
+}
+
+.header {
+
+  .wrapper {
+    position: relative;
+  }
+
+  &__logo {
+    margin-bottom: 10px;
+    @extend %font-logo;
+
+    span {
+      color: green;
+      @extend %font-logo;
+    }
+  }
+
+  &__score {
+    position: absolute;
+    right: 10px;
+    top: 20px;
+  }
+}
+
+.level {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+
+  &__item {
+    padding: 2px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: green;
+    color: white;
+    
+    &-active {
+      background: lighten($color: green, $amount: 10%);
+    }
+  }
+}

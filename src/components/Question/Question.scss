@@ -1,0 +1,33 @@
+.question {
+
+  .wrapper {
+    margin-bottom: 10px;
+    padding: 15px;
+    display: flex;
+    background: #303030;
+    border-radius: 5px;
+  }
+
+  &__img {
+    width: 140px;
+    height: 100px;
+    margin-right: 15px;
+    border-radius: 5px;
+    object-fit: cover;
+
+    @media (max-width: 480px) {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  &__content {
+    flex-grow: 1;
+
+    h3 {
+      padding-bottom: 5px;
+      margin-bottom: 5px;
+      border-bottom: 1px solid gray;
+    }
+  }
+}

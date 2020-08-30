@@ -1,0 +1,117 @@
+$size-btn: 36px;
+$color-btn: green;
+$color-hover: lighten($color: green, $amount: 10%);
+
+.btn-play {
+  height: 16px;
+  width: 16px;
+  border: 8px solid transparent;
+  border-left: 16px solid $color-btn;
+  border-right: 0;
+  transform: translateX(2px);
+}
+
+.btn-pause {
+  height: 16px;
+  width: 16px;
+  border-left: 6px solid $color-btn;
+  border-right: 6px solid $color-btn;
+}
+
+.player {
+  display: flex;
+
+  &__btn {
+    display:  flex;
+    justify-content: center;
+    align-items: center;
+    width: $size-btn;
+    height: $size-btn;
+    margin-right: 5px;
+    border-radius: 50%;
+    border: 2px solid $color-btn;
+
+    &:hover {
+      border: 2px solid $color-hover;
+      cursor: pointer;
+    
+      &>.btn-play {
+        border-left: 16px solid $color-hover;
+      }
+
+      &>.btn-pause  {
+        border-left: 6px solid $color-hover;
+        border-right: 6px solid $color-hover;
+      }
+    }
+  }
+
+  &__line {
+    flex-grow: 1;
+  }
+}
+
+.line {
+  position: relative;
+  height: 70px;
+
+  &__long {
+    position: absolute;
+    top: 13px;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: gray;
+    border-radius: 5px;
+  }
+
+  &__base {
+    position: absolute;
+    top: 8px;
+    left: 5px;
+    width: calc(100% - 30px);
+    height: 20px;
+  }
+
+  &__mark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background: gray;
+    border: 1px solid #000000;
+    border-radius: 10px;
+  }
+
+  &__time {
+    position: absolute;
+    top: 30px;
+    font-size: 0.6rem;
+
+    &-curr {
+      left: 0;
+    }
+
+    &-end  {
+      right: 0;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    left: 0;
+    top: 50px;
+    width: 20px;
+    height: 20px;
+    filter: invert(1);
+  }
+
+  &__volume {
+    position: absolute;
+    left: 30px;
+    top: 50px;
+    width: 90px;
+    cursor: pointer;
+  }
+}
